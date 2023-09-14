@@ -14,6 +14,7 @@ echo ""
 
 set -ev
 
+add-apt-repository ppa:openjdk-r/ppa
 apt-get update
 apt-get $UNATTENDED install \
   wget                           \
@@ -29,7 +30,6 @@ apt-get $UNATTENDED install \
   dpkg                           \
   dpkg-dev                       \
   gettext                        \
-#  openjdk-8-jre-headless         \
-  default-jre                    \
+  openjdk-8-jre-headless         \
   jq
 
